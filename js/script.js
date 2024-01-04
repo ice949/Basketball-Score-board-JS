@@ -10,32 +10,39 @@ let teamBIncrement3 = document.getElementById("teamBIncrement3");
 teamAIncrement1.addEventListener("click", function() {
     teamAScore++;
     document.getElementById("teamAScore").innerHTML = teamAScore;
-})
+});
 
 teamAIncrement2.addEventListener("click", function() {
     teamAScore += 2;
     document.getElementById("teamAScore").innerHTML = teamAScore;
-})
+});
 
 teamAIncrement3.addEventListener("click", function() {
     teamAScore += 3;
     document.getElementById("teamAScore").innerHTML = teamAScore;
-})
+});
 
 teamBIncrement1.addEventListener("click", function() {
     teamBScore++;
     document.getElementById("teamBScore").innerHTML = teamBScore;
-})
+});
 
 teamBIncrement2.addEventListener("click", function() {
     teamBScore += 2;
     document.getElementById("teamBScore").innerHTML = teamBScore;
-})
+});
 
 teamBIncrement3.addEventListener("click", function() {
     teamBScore += 3;
     document.getElementById("teamBScore").innerHTML = teamBScore;
-})
+});
 
-console.log(teamAScore);
-console.log(teamBScore);
+// Path: js/script.js
+let resetButton = document.getElementById("resetBtn");
+
+resetButton.addEventListener("click", function() {
+    teamAScore = 0;
+    teamBScore = 0;
+    document.getElementById("teamAScore").innerHTML = teamAScore;
+    document.getElementById("teamBScore").innerHTML = teamBScore;
+});
