@@ -1,3 +1,21 @@
+// DRY - Don't Repeat Yourself
+
+const incrementTeamAScore = (point) => {
+    let score = parseInt(document.getElementById("teamAScore").innerHTML);
+    score += point;
+    document.getElementById("teamAScore").innerHTML = score;
+}
+
+const incrementTeamBScore = (point) => {
+    let score = parseInt(document.getElementById("teamBScore").innerHTML);
+    score += point;
+    document.getElementById("teamBScore").innerHTML = score;
+}
+
+
+
+// Another way to do it
+
 let teamAScore = parseInt(document.getElementById("teamAScore").innerHTML);
 let teamBScore = parseInt(document.getElementById("teamBScore").innerHTML);
 let teamAIncrement1 = document.getElementById("teamAIncrement1");
@@ -46,3 +64,4 @@ resetButton.addEventListener("click", function() {
     document.getElementById("teamAScore").innerHTML = teamAScore;
     document.getElementById("teamBScore").innerHTML = teamBScore;
 });
+
