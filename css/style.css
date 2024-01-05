@@ -26,7 +26,7 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
     border: none;
-    background-color: #fa0808;
+    background-color: rgb(28, 230, 28);
     color: #faf8f8;
     font-size: 20px;
     cursor: pointer;
@@ -39,7 +39,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #bbb;
+    background-color: gray;
     border-radius: 10px;
     color: #f2f2f2;
     font-family: xenara;
