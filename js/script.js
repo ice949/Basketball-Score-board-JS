@@ -1,3 +1,21 @@
+// DRY - Don't Repeat Yourself
+
+const incrementTeamAScore = (point) => {
+    let score = parseInt(document.getElementById("teamAScore").innerHTML);
+    score += point;
+    document.getElementById("teamAScore").innerHTML = score;
+}
+
+const incrementTeamBScore = (point) => {
+    let score = parseInt(document.getElementById("teamBScore").innerHTML);
+    score += point;
+    document.getElementById("teamBScore").innerHTML = score;
+}
+
+
+
+// Another way to do it
+
 let teamAScore = parseInt(document.getElementById("teamAScore").innerHTML);
 let teamBScore = parseInt(document.getElementById("teamBScore").innerHTML);
 let teamAIncrement1 = document.getElementById("teamAIncrement1");
@@ -12,27 +30,27 @@ teamAIncrement1.addEventListener("click", function() {
     document.getElementById("teamAScore").innerHTML = teamAScore;
 });
 
-teamAIncrement2.addEventListener("click", function() {
+teamAIncrement2.addEventListener("click", () => {
     teamAScore += 2;
     document.getElementById("teamAScore").innerHTML = teamAScore;
 });
 
-teamAIncrement3.addEventListener("click", function() {
+teamAIncrement3.addEventListener("click", () => {
     teamAScore += 3;
     document.getElementById("teamAScore").innerHTML = teamAScore;
 });
 
-teamBIncrement1.addEventListener("click", function() {
+teamBIncrement1.addEventListener("click", () => {
     teamBScore++;
     document.getElementById("teamBScore").innerHTML = teamBScore;
 });
 
-teamBIncrement2.addEventListener("click", function() {
+teamBIncrement2.addEventListener("click", () => {
     teamBScore += 2;
     document.getElementById("teamBScore").innerHTML = teamBScore;
 });
 
-teamBIncrement3.addEventListener("click", function() {
+teamBIncrement3.addEventListener("click", () => {
     teamBScore += 3;
     document.getElementById("teamBScore").innerHTML = teamBScore;
 });
@@ -40,9 +58,10 @@ teamBIncrement3.addEventListener("click", function() {
 // Path: js/script.js
 let resetButton = document.getElementById("resetBtn");
 
-resetButton.addEventListener("click", function() {
+resetButton.addEventListener("click", () => {
     teamAScore = 0;
     teamBScore = 0;
     document.getElementById("teamAScore").innerHTML = teamAScore;
     document.getElementById("teamBScore").innerHTML = teamBScore;
 });
+
